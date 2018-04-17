@@ -34,36 +34,36 @@ The three key files for the Docker container are:
 
 ## Tips for Docker
 
->Stop and remove any existing containers
+>Stop and remove any existing containers.
 
 `docker stop sdr2domo`
 
 `docker container rm sdr2domo -f`
 
->Assuming you cloned to ~/sdrdomo then you build from outside of it.  This will take a while but watch and learn
+>Assuming you cloned to ~/sdrdomo then you build from outside of it.  This will take a while but watch and learn.
 
 `docker build sdr2domo --tag sdr2domo`
 
->Once complete look for the image
+>Once complete look for the image.
 
 `docker image ls`
 
->The `docker image ls` shows you any container images.   I would delete any un-named ones as they are spare/old
+>The `docker image ls` shows you any container images.   I would delete any un-named ones as they are spare/old.
 
 `docker image rm 2d118521788f`
 
 `docker image ls`
 
->Run the new container !
->At the moment its run at the highest privilege as USB ports are odd with Docker.   I don't currently know of a way round this
+>Run the new container.
+>At the moment its run at the highest privilege as USB ports are odd with Docker.   I don't currently know of a way round this.
 
 `docker run --name sdr2domo --restart always -d --privileged -v /dev/bus/usb:/dev/bus/usb --env-file sdr2domo/sdr_2_domo.env sdr2domo`
 
->Check its running
+>Check its running.
 
 `docker ps`
 
->Look at the logs.  More is exposed if you enable to `set -x`
+>Look at the logs.  More is exposed if you enable to `set -x`.
 
 `docker container logs sdr2domo --follow`
 
