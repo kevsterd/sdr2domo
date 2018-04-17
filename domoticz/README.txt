@@ -1,0 +1,1 @@
+Copy these to the Domoticz/scripts/lua directory
