@@ -14,7 +14,7 @@ I have three sensors I am interested in.  I use the Watchman Sonic Oil Tank moni
 
 The tank sensor is seen by the SDR and is decoded and output as JSON.
 
-`{"time" : "2018-04-17 20:48:51", "model" : "Oil Watchman", "id" : 134285721, "flags" : 128, "maybetemp" : 21, "temperature_C" : 13.333, "binding_countdown" : 0, "depth" : 73}`
+`{"time" : "2018-04-17 20:48:51", "model" : "Oil Watchman", "id" : 134288721, "flags" : 128, "maybetemp" : 21, "temperature_C" : 13.333, "binding_countdown" : 0, "depth" : 73}`
 
 I use some maths in the Domoticz scripts (included) to work out volume based on height in tank and then display percentage in tank and a quantity in litres.   Its not 100% correct but close enough for me.   Some man maths was involved to get these correct.
 
@@ -71,4 +71,4 @@ Look at the logs.  More is exposed if you enable to `set -x`.
 
 Or you can open a bash shell within and poke away....
 
-`docker exec --it sdrdomo bash`
+`docker exec --it sdr2domo bash`
