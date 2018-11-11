@@ -34,6 +34,8 @@ The three key files for the Docker container are:
 |sdr_2_domo.sh|Script called by the continer when ran|
 |sdr_2_domo.env|A set of runtime parameters used to define access into Domotics, device ID's and Virtual ID's|
 
+I have added a flag in the .env file in the latest version, that allows you to turn on tracing/logging without having to rebuild the container.  Should of done that fron the start !
+
 ## Tips for Docker
 
 Stop and remove any existing containers.
@@ -59,7 +61,7 @@ The `docker image ls` shows you any container images.   I would delete any un-na
 Run the new container.
 At the moment its run at the highest privilege as USB ports are odd with Docker.   I don't currently know of a way round this.
 
-`docker run --name sdr2domo --restart always -d --privileged -v /dev/bus/usb:/dev/bus/usb --env-file sdr2domo/sdr_2_domo.env sdr2domo`
+`docker run --name sdr2domo --restart always --privileged -v /dev/bus/usb:/dev/bus/usb --env-file sdr2domo/sdr_2_domo.env sdr2domo`
 
 Check its running.
 
