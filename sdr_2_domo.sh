@@ -7,7 +7,8 @@
 # See also https://www.domoticz.com/wiki/Domoticz_API/JSON_URL's
 
 # Author: Kevin Iddles
-# Version: 1.0 - 2018-04-17 - Initial Version
+# Version:  1.1 - 2018-11-11 - Updated to add logging switch
+#           1.0 - 2018-04-17 - Initial Version
 
 # Remove hash on next line for debugging out to the docker container log
 #set -x
@@ -22,7 +23,11 @@ do
 	echo $line | \
 
 # Remove hash from following line to record a raw log of events
-   #tee -a /tmp/rtl433-raw.log
+
+	if [[ "$SDR_DEBUG" =~ "YES" ]]
+	then
+		tee -a /tmp/rtl433-raw.log
+	fi
 
 #Ideally this would use the count supplied as a param and loop, however this works for now
 #
