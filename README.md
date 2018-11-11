@@ -34,7 +34,7 @@ The three key files for the Docker container are:
 |sdr_2_domo.sh|Script called by the continer when ran|
 |sdr_2_domo.env|A set of runtime parameters used to define access into Domotics, device ID's and Virtual ID's|
 
-I have added a flag in the .env file in the latest version, that allows you to turn on tracing/logging without having to rebuild the container.  Should of done that fron the start !
+I have added a flag in the .env file in the latest version, that allows you to turn on tracing/logging without having to rebuild the container.  Should of done that from the start !
 
 ## Tips for Docker
 
