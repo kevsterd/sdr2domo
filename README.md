@@ -24,7 +24,7 @@ You can use generic virtual sensors in Domotics to take in the values.   The LUA
 
 ## Using
 
-Currently I haven't published this to the Docker registry so its all manual for now.   I'm still learning Docker, Markdown, Git and Travis CI :)
+This is being pushed to Docker Hub today
 
 The three key files for the Docker container are:
 
