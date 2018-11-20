@@ -12,7 +12,7 @@ LABEL Description="This image is to monitor a SDR device on 433mgz and push spec
 	Vendor="YDC" \
 	Version="1.0"
 
-RUN apt-get update && 
+RUN apt-get update && \
     apt-get install -y wget curl
 
 RUN apt-get update && \
