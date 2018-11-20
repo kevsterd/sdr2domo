@@ -12,7 +12,8 @@ LABEL Description="This image is to monitor a SDR device on 433mgz and push spec
 	Vendor="YDC" \
 	Version="1.0"
 
-RUN apt-get update && apt-get install -y wget curl
+RUN apt-get update && 
+    apt-get install -y wget curl
 
 RUN apt-get update && \
     apt-get install -y libusb-1.0-0-dev pkg-config ca-certificates git-core cmake build-essential --no-install-recommends && \
