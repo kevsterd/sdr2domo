@@ -6,11 +6,11 @@
 # The container needs priviliged access to /dev/bus/usb on the host.
 # 
 
-FROM multiarch/debian-debootstrap:armhf-jessie
+FROM multiarch/debian-debootstrap:armhf-stretch
 
 LABEL Description="This image is to monitor a SDR device on 433mgz and push specific events to Domoticz" \
 	Vendor="YDC" \
-	Version="1.0"
+	Version="1.1"
 
 RUN apt-get update && \
     apt-get install -y wget curl
